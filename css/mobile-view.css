@@ -1,5 +1,5 @@
 body{
-    background-image: url('..image/bg.jpg');
+    background-image: url('../image/bg.jpg');
     padding: 0 5px;
 }
 .container{
@@ -208,7 +208,7 @@ body{
 
 @media (min-width: 576px){
     body{
-        background-image: url('image/bg.jpg');
+        background-image: url('../image/bg.jpg');
         background-position: fixed;
         background-size: cover;
         background-repeat: no-repeat;
