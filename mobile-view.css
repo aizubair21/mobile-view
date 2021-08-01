@@ -1,3 +1,7 @@
+body{
+    background-image: url('bg.jpg');
+    padding: 0 5px;
+}
 .container{
     width: 100%;
     margin: 0px auto;
@@ -11,12 +15,15 @@
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
-    background-color: inherit;
+    background-color: rgba(255, 255, 255, 0.267);
+    border-left:1px solid white;
+    border-right: 1px solid white;
 
 }
 
 .app{
     box-shadow: 0px 0px 5px rgba(0,0,0, 0.2);
+    padding: px;
 }
 
 .top, .middle, .bottom{
@@ -34,7 +41,7 @@
     height: 50px;
     display: flex;
     align-items: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 25px;
     margin: 10px 10px 0px 10px;
     box-shadow: 0px 0px 5px rgba(0,0,0, 0.2);
@@ -65,11 +72,13 @@
 
 .top .top-middle input{
     position: relative;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 25px;
     height: 30px;
     width: 100%;
-    text-indent: 5px;;
+    text-indent: 5px;
+    background-color:rgb(255, 255, 255) ;
+    box-shadow: 0px 0px 5px rgb(255, 255, 255);
     text-transform: lowercase;
 }
 
@@ -110,11 +119,11 @@
     flex:1;
     overflow: scroll;
     display: block;
-    box-shadow: 0px 0px 5px rgba(0,0,0, 0.2);
-    padding: 20px;
-    margin: 15px;
+    /* box-shadow: 0px 0px 5px rgba(0,0,0, 0.2); */
+    padding: 10px;
+    margin: 10px;
     background-color: white;
-    border-radius: 5px;;
+
 }
 ::-webkit-scrollbar {
     width: 0px;
