@@ -1,5 +1,5 @@
 body{
-    background-image: url('bg.jpg');
+    background-image: url('/image/bg.jpg');
     padding: 0 5px;
 }
 .container{
@@ -18,22 +18,19 @@ body{
     background-color: rgba(255, 255, 255, 0.267);
     border-left:1px solid white;
     border-right: 1px solid white;
+    overflow: hidden;
 
 }
 
 .app{
     box-shadow: 0px 0px 5px rgba(0,0,0, 0.2);
     padding: px;
+    position: relative;
 }
 
 .top, .middle, .bottom{
     box-sizing: border-box;
-  
-
-
 }
-
-
 
 
 
@@ -42,7 +39,7 @@ body{
     display: flex;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 25px;
+    /* border-radius: 25px; */
     margin: 10px 10px 0px 10px;
     box-shadow: 0px 0px 5px rgba(0,0,0, 0.2);
 
@@ -56,7 +53,7 @@ body{
     
 }
 .top .top-left .left-container i{
-    color: black;
+    color: rgb(0, 0, 0);
     align-self: center;
     transition: all linear 0.5s;
 }
@@ -77,22 +74,25 @@ body{
     height: 30px;
     width: 100%;
     text-indent: 5px;
-    background-color:rgb(255, 255, 255) ;
-    box-shadow: 0px 0px 5px rgb(255, 255, 255);
+    /* background-color:rgb(255, 255, 255) ; */
+    /* box-shadow: 0px 0px 5px rgb(255, 255, 255); */
     text-transform: lowercase;
+    text-indent: 10px;
+}
+.top .top-middle input:focus{
+    border: 1px solid #298fe2;
+    border-radius: 25px;
+   
 }
 
 .top .top-middle button{
     position: absolute;
-    right: 10px;
+    right: 5px;
     top: 50%;
-
     transform: translate(-50%, -50%);
     border-radius: 50%;
-
-
-
 }
+
 /* .top .top-middle button i{} */
 
 .top .top-right{
@@ -105,9 +105,10 @@ body{
 }
 
 .top .top-right img{
-    border: 1px solid green;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 3px;
     border-radius: 50%;
-    height: 30px;
+    height: 20px;
     float: right;
 
 }
@@ -201,7 +202,10 @@ body{
 
 @media (min-width: 576px){
     body{
-        background-image: url(bg.jpg);
+        background-image: url('/image/avatar.png');
+        background-position: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     .mobile-view-body{
         width: 575px;
@@ -239,4 +243,17 @@ body{
         border-bottom-right-radius: 5px;
     }
 
+}
+
+@media ( max-width: 361px) {
+    .mobile-view-body .overlay{
+        position: absolute;
+        top: -250px;
+        width: 100%;
+        height: 400px;
+        z-index: -1;
+        border-radius: 50px;
+        background-color: rgb(8, 255, 222);
+        transform: rotate(90deg);
+    }
 }
