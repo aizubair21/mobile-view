@@ -48,9 +48,10 @@ body{
 .top .top-left{
     padding: 10px;
     width:10%;
-
    
-    
+}
+.top .top-left-content{
+    z-index: 999;
 }
 .top .top-left .left-container i{
     color: rgb(0, 0, 0);
@@ -104,6 +105,10 @@ body{
 
 }
 
+.top .top-right .content{
+    z-index: 999;
+}
+
 .top .top-right img{
     border: 1px solid rgb(0, 0, 0);
     padding: 3px;
@@ -123,7 +128,7 @@ body{
     /* box-shadow: 0px 0px 5px rgba(0,0,0, 0.2); */
     padding: 10px;
     margin: 10px;
-    background-color: white;
+    background-color: inherit;
 
 }
 ::-webkit-scrollbar {
@@ -154,7 +159,8 @@ body{
   
   
 .middle-element{
-    text-align:justify
+    text-align:justify;
+    z-index: 999;
 }
 
 
@@ -248,12 +254,13 @@ body{
 @media ( max-width: 361px) {
     .mobile-view-body .overlay{
         position: absolute;
-        top: -250px;
-        width: 100%;
+        top: -220px;
+        left: 7%;
+        width: 300px;
         height: 400px;
         z-index: -1;
-        border-radius: 50px;
-        background-color: rgb(8, 255, 222);
+        border-radius: 100%;
+        background-color: rgb(0, 255, 221);
         transform: rotate(90deg);
     }
 }
