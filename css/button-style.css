@@ -1,8 +1,13 @@
 .clickTest{
     width:300px;
-    margin:0 auto;
+    height: 5in;
+    margin: 5px auto;
     text-align: center;
-    /* border: 3px solid green; */
+    border: 3px solid green;
+    padding: 5px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
 }
 .clickTest button{
 
@@ -41,8 +46,14 @@
 /* second button start */
 .second-button{
     width: 300px;
-    margin: 0 auto;
+    height: 5in;
+    margin: 5px auto;
     text-align: center;
+    border: 3px solid green;
+    padding: 5px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
 }
 .second-button button{
     position: relative;
@@ -80,13 +91,19 @@
 /* third style start */
 .third-style{
   width: 300px;
-  margin: 0 auto;
+  height: 5in;
+  margin: 5px auto;
   text-align: center;
+  border: 3px solid green;
+  padding: 5px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
   
 }
 
 
-.third-style button{
+.middle .middle-element .third-style button{
   position: relative;
   padding: 15px;
   color: black;
@@ -101,7 +118,7 @@
 }
 
 
-.third-style button::after{
+.middle .middle-element .third-style button::after{
   content: "";
   position: absolute;
   left: 50%;
