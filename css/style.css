@@ -81,11 +81,13 @@
     font-size: 20px;
     padding: 5px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .top .top-right .content span:hover{
     color: red;
     cursor: pointer;
+
 }
 
 .fade {
