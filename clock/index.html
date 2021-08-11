@@ -245,16 +245,7 @@
       
     }
 
-    .digital-clock .clock-body .day-output {
-      position: absolute;
-      top: 60px;
-      width: 400px;
-      height: 200px;
-      /* border: 1px solid; */
-      border-radius: 10px;
-      background-color: lightpink;
-      box-shadow: 0px 0px 5px ;
-    }
+   
 
     .digital-clock .clock-body .clock-output .div {
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -263,18 +254,49 @@
       /* border: rgb(255, 0, 0); */
     }
 
+     .digital-clock .clock-body .day-output {
+      position: absolute;
+      top: 60px;
+      width: 400px;
+      height: 230px;
+      /* border: 1px solid; */
+      border-radius: 10px;
+      background-color: lightpink;
+      box-shadow: 0px 0px 5px ;
+    }
+
+    .digital-clock .clock-body .day-output .week {
+      display: flex;
+    }
+    .digital-clock .clock-body .day-output .week div{
+      width: 15%;
+      border-bottom:3px solid white ;
+      padding: 5px;
+      margin: 5px;
+      text-align: center;
+    }
+
     .digital-clock .clock-body .month{
      width: 100%;
      height: 200px;
+     box-sizing: border-box;
       
     }
     .digital-clock .clock-body .month .first, .second, .last {
       display: flex;
+      box-sizing: border-box;
+
    
     }
 
     .digital-clock .clock-body .month .first div, .second div, .last div {
-      width: 10%;
+      width: 12%;
+      font-size: 20px;
+      /* padding: 10px; */
+      margin: 5px;
+      border: 1px solid;
+      box-sizing: border-box;
+      text-align: center;
     }
     
   </style>
@@ -342,13 +364,13 @@
 
       <div class="day-output">
         <div class="week">
-          <button> Sat</button>
-          <button> Sun</button>
-          <button> Mun</button>
-          <button> Tues</button>
-          <button> Wed</button>
-          <button> Thu</button>
-          <button> Fri</button>
+          <div class="weeks"> Sat</div>
+          <div class="weeks"> Sun</div>
+          <div class="weeks"> Mun</div>
+          <div class="weeks"> Tues</div>
+          <div class="weeks">  Wed</div>
+          <div class="weeks"> Thu</div>
+          <div class="weeks"> Fri</div>
         </div>
         <div class="month">
           <div class="first">
@@ -359,25 +381,29 @@
             <div>5</div>
             <div>6</div>
             <div>7</div>
-            <div>8</div>
-            <div>9</div>
-            <div>10</div>
 
           </div>
           <div class="second">
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
             <div>11</div>
             <div>12</div>
             <div>13</div>
             <div>14</div>
+            
+          </div>
+          <div class="last">
             <div>15</div>
             <div>16</div>
             <div>17</div>
             <div>18</div>
             <div>19</div>
             <div>20</div>
+            <div>21</div>
+           
           </div>
           <div class="last">
-            <div>21</div>
             <div>22</div>
             <div>23</div>
             <div>24</div>
@@ -385,8 +411,11 @@
             <div>26</div>
             <div>27</div>
             <div>28</div>
+          </div>
+          <div class="last">
             <div>29</div>
             <div>30</div>
+          </div>
           </div>
         </div>
       
@@ -400,6 +429,8 @@
 
 
   <script>
+
+ let watch = new Date();
 function timeShow () {
     let watch = new Date();
     document.getElementById("d-hour").innerHTML = `${watch.getHours()}: `;
@@ -436,7 +467,17 @@ setInterval(timeShow, 10);
 //   list.appendChild(text);
 //   document.getElementById("days").appendChild(list);
 // }
-  
+
+
+function highlightWeek() {
+  let toDay = watch.getDay()+1;
+  let weekDay = document.getElementsByClassName("weeks");
+  weekDay[toDay].style.backgroundColor = "green";
+  weekDay[toDay].style.border = "none";
+}
+highlightWeek();
+
+let 
   </script>
 </body>
 </html>
