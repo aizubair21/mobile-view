@@ -1,60 +1,186 @@
-
-.animation-3d {
-  /* border: 1px double ; */
-  position: relative;
-  width: 300px;
-  height: 200px;
-  margin: 50px auto;
-  text-align: center;
-  background-color: gray;
-  border-top:;
-}
-
-.animation-3d .first {
-  position: absolute;
-  top: 50px;
-  left: 100px;
-  /* transform: translate(50%, 50%); */
-  width: 100px ;
-  height: 100px;
-  background-color: rgb(0, 150, 0);
-  
-  border-radius: 50%;
-  border: 4px solid rgb(0, 150, 0);
-  border-top: 3px solid purple;
-  border-bottom: 3px solid purple;
-  animation: rotate-3d 2.5s ease forwards infinite;
- 
-}
-.animation-3d .second {
-  position: absolute;
-  top: 56px;
-  left: 106px;
-  /* transform: translate(-50%, -50%); */
-  width: 88px;
-  height: 88px;
-  border: 3px solid rgb(0, 150, 0);
-  border-radius:50%;
-  border-top: 3px solid purple;
-  border-bottom: 3px solid purple;
-  animation: rotate-3d 2.3s ease forwards infinite;
-}
-
-.animation-3d .third {
-  position: absolute;
-  top: 65px;
-  left: 115px;
-  /* background-color: rgb(184, 201, 184); */
-  width: 70px;
-  height: 70px;
-  border: 3px solid gray;
-  border-top: 3px solid purple;
-  border-bottom: 3px solid purple;
-  border-radius: 50%;
-  animation: rotate-3d 2s ease forwards infinite;
-}
 @keyframes rotate-3d {
 
   to {transform: rotate(360deg)};
 
+}
+
+
+.timing-fungtion {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.timing-fungtion .time-body{
+  width: 350px;
+  height:350px;
+  margin: 20px auto;
+  /* border: 4px solid; */
+  background-color: lightblue;
+  border-radius: 50%;
+  position: relative;
+  border: 2px solid white;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  /* animation: rotate-3d 300s linear infinite alternate-reverse; */
+}
+
+
+.timing-fungtion .time-body .overlay{
+
+}
+.show-clock {
+  position: absolute;
+  top: 140px;
+  left: 75px;
+  z-index: 999;
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  box-shadow:0px 0px 5px black ;
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.show-clock div {
+  margin: 0 5px;
+}
+
+.show-cal {
+  position: absolute;
+  top: 230px;
+  left: 100px;
+  width: 200px;
+  height: 60px;
+  border-radius: 25px;
+  z-index: 999;
+  /* box-shadow:0px 0px 5px black ; */
+  display: inline-block;
+}
+
+.show-cal div {
+  width: 150px;
+  margin:5px 2px;
+  display: flex;
+  text-align: center;
+}
+.show-cal .current_day {
+  text-indent: 35px;
+}
+.timing-fungtion .time-body .hour {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 320px;
+  height: 320px;
+  background-color: lightcoral;
+  border-radius: 50%;
+  position: relative;
+  border: 2px solid white;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  animation: rotate-3d 2s linear infinite;
+  box-shadow:0px 0px 5px black ;
+}
+
+.timing-fungtion .time-body .hour .point{
+  position: absolute;
+  top: 0;
+  left: 146px;
+  width: 8px;
+  height: 10px;
+  background-color: black;
+
+}
+
+
+.timing-fungtion .time-body .minute {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  width: 280px;
+  height: 280px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  z-index: 1;
+  border: 2px solid rgb(255, 255, 255);
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  animation: rotate-3d 2s linear infinite reverse; 
+  box-shadow:0px 0px 5px black ;
+}
+
+.timing-fungtion .time-body .minute .minute-point .pointer{
+  position: absolute;
+  top: 0;
+  left: 137.5px;
+  width: 5px;
+  height: 50px;
+  background-color: black;
+
+
+}
+
+.timing-fungtion .time-body .second {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 250px;
+  height: 250px;
+  background-color: lightcoral;
+  border-radius: 50%;
+  z-index: 2;
+  animation: rotate-3d 60s linear forwards infinite;
+  border: 2px solid rgb(255, 255, 255);
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  box-shadow:0px 0px 5px rgb(16, 218, 32) ;
+}
+
+
+.timing-fungtion .time-body .second .point{
+  position: absolute;
+  top: 0;
+  left: 121px;
+  width: 3px;
+  height: 50px;
+  background-color: black;
+
+}
+
+
+.timing-fungtion .time-body .point-12{
+  position: absolute;
+  top: 0px;
+  left: 171px;
+  width: 8px;
+  height: 30px;
+  background-color: black;
+
+}
+.timing-fungtion .time-body .point-9{
+  position: absolute;
+  top: 171px;
+  left: 0;
+  width: 30px;
+  height: 10px;
+  background-color: black;
+}
+.timing-fungtion .time-body .point-3{
+  position: absolute;
+  top: 171px;
+  right: 0;
+  width: 30px;
+  height: 10px;
+  background-color: black;
+}
+.timing-fungtion .time-body .point-6{
+  position: absolute;
+  bottom: 0;
+  left: 171px;
+  width: 10px;
+  height: 30px;
+  background-color: black;
 }
