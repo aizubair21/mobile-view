@@ -1,20 +1,11 @@
 
-
-.result {
-  margin: 25px;
-  padding: 10px;
-}
-#else_key {
-  display: none;
-}
-
 .animation-3d {
   border: 1px double ;
   position: relative;
-  width: 400px;
+  width: 100%;
   height: 200px;
   margin: 0 auto;
-  background-color: gray;
+  /* background-color: gray; */
 }
 
 .animation-3d .first {
@@ -30,7 +21,7 @@
   border: 4px solid gray;
   border-top: 3px solid purple;
   border-bottom: 3px solid purple;
-  animation: rotate-3d 3s ease forwards infinite;
+  animation: rotate-3d 2.5s ease forwards infinite;
  
 }
 .animation-3d .second {
@@ -44,7 +35,7 @@
   border-radius:50%;
   border-top: 3px solid purple;
   border-bottom: 3px solid purple;
-  animation: rotate-3d 2.5s ease forwards infinite;
+  animation: rotate-3d 2.3s ease forwards infinite;
 }
 
 .animation-3d .third {
@@ -74,8 +65,8 @@
 }
 
 .timing-fungtion .time-body{
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: 300px;
   margin: 20px auto;
   border: 4px solid;
   background-color: lightblue;
