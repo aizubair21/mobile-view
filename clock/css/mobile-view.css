@@ -3,7 +3,7 @@ body{
     padding: 0 5px;
 }
 .container{
-    width: 100%;
+
     margin: 0px auto;
     box-sizing: border-box;
 }
@@ -43,9 +43,6 @@ body{
     box-shadow: 0px 0px 5px rgba(0,0,0, 0.2);
     padding: px;
     position: relative;
-    z-index: ;
-    overflow: hidden;
-
 }
 
 .top, .middle, .bottom{

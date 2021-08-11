@@ -2,29 +2,52 @@
  let watch = new Date();
  function timeShow () {
      let watch = new Date();
-     document.getElementById("d-hour").innerHTML = `${watch.getHours()}: `;
-     document.getElementById("d-minute").innerHTML = `${watch.getMinutes()}: `; 
-     document.getElementById("d-secound").innerHTML = watch.getSeconds();
+     document.getElementById("hour").innerHTML = `${watch.getHours()}: `;
+     document.getElementById("minute").innerHTML = `${watch.getMinutes()}: `; 
+     document.getElementById("second").innerHTML = watch.getSeconds();
  
    if (watch.getHours() < 10) {
-     document.getElementById("d-hour").innerHTML = `0${watch.getHours()}: ` ;
+     document.getElementById("hour").innerHTML = `0${watch.getHours()}: ` ;
    }
    if (watch.getSeconds() == 0) {
-     document.getElementById("d-secound").innerHTML = `6${watch.getSeconds()}` ;
+     document.getElementById("second").innerHTML = `6${watch.getSeconds()}` ;
    }
  
    if (watch.getSeconds() > 0 && watch.getSeconds() < 10) {
-     document.getElementById("d-secound").innerHTML = `0${watch.getSeconds()}` ;
+     document.getElementById("second").innerHTML = `0${watch.getSeconds()}` ;
    }
  
    if (watch.getMinutes() < 10) {
-     document.getElementById("d-minute").innerHTML = `0${watch.getMinutes()}: ` ;
+     document.getElementById("minute").innerHTML = `0${watch.getMinutes()}: ` ;
+   }
+   if (watch.getHours() > 12) {
+     document.getElementById("day-light").innerHTML = "PM";
+
+   } else {
+    document.getElementById("day-light").innerHTML = "AM";
    }
  
- 
- 
+
  }
- timeShow();
+
+
+ function show_cal(time) {
+   document.getElementsByClassName("d-month").innerHTML = "time";
+ }
+
+  
+ 
+ function highlightWeek() {
+   let toDay = watch.getDay()+1;
+   let weekDay = document.getElementsByClassName("weeks");
+   weekDay[toDay].style.backgroundColor = "green";
+   weekDay[toDay].style.border = "none";
+ }
+
+
+
+  timeShow();
+ highlightWeek();
  setInterval(timeShow, 10);
  // let element = "";
  // for (let index = 0; index < 32; index++) {
@@ -36,14 +59,3 @@
  //   list.appendChild(text);
  //   document.getElementById("days").appendChild(list);
  // }
- 
- 
- function highlightWeek() {
-   let toDay = watch.getDay()+1;
-   let weekDay = document.getElementsByClassName("weeks");
-   weekDay[toDay].style.backgroundColor = "green";
-   weekDay[toDay].style.border = "none";
- }
- highlightWeek();
- 
- let 
