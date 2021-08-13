@@ -113,15 +113,17 @@
   show_cal();
  
  function highlightWeek() {
-   let toDay = watch.getDay()+1;
+   let w_day = watch.getDay()+1;
    let weekDay = document.getElementsByClassName("weeks");
-   weekDay[toDay].style.backgroundColor = "green";
-   weekDay[toDay].style.border = "none";
+   weekDay[w_day].style.backgroundColor = "green";
+   weekDay[w_day].style.color = "white";
+   weekDay[w_day].style.border = "none";
+   weekDay[w_day].style.borderRadius = "10px";
  }
 
 
 
-  timeShow();
+ timeShow();
  highlightWeek();
  setInterval(timeShow, 10);
  // let element = "";
@@ -133,4 +135,11 @@
  //   var text = document.createTextNode (element);
  //   list.appendChild(text);
  //   document.getElementById("days").appendChild(list);
- // }
+ // 
+
+var toDate = watch.getDate();
+console.log(toDate);
+ var monthChild = document.getElementById("month").children[toDate-1];
+ monthChild.style.backgroundColor = "green";
+ monthChild.style.color = "white";
+ monthChild.style.borderRadius = "25px";
