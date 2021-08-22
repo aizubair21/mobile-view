@@ -1,0 +1,112 @@
+body{
+    background-color: rgb(182, 180, 180);
+}
+.row{
+    /* border: 1px solid black; */
+    justify-content: space-between;
+    padding: 120px 0;
+    align-items: center;
+    align-content: center;
+}
+.col-5{
+    /* border: 1px solid green; */
+    height: 400px;
+}
+.col-6{
+}
+
+.left img{
+    color: inherit;
+    width:300px;;
+    /* border: 1px solid black; */
+  
+}
+.left h2{
+    font-size: 25px;
+    font-family:  SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    margin-left: 25px;
+}
+
+form{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    background-color: white;
+    width:100%;
+    height: 100%;
+}
+form fieldset{
+    display: block;
+    padding: 20px;
+   
+}
+input{
+    border-radius: 6px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, .3);
+    width: 95%;
+    margin: 10px 0;
+    padding:15px;
+    font-size: 15px;
+    
+
+}
+form a{
+    /* border: 1px solid red; */
+    width: 95%;
+    height: 30px;
+    text-align: center;
+    padding: 25px 0;
+    color: #1877f2;
+    border-bottom: 1px solid rgb(170, 167, 167);
+    font-size: 16px;
+    
+    
+}
+form a:hover{
+    text-decoration: underline;
+}
+
+input[type=submit] {
+    padding:12px;
+    background-color: #1877f2;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+input[type=submit], input[type=button]:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+
+input[type=text]:focus{
+    border: 1px solid #1877f2;
+}
+input[type=password]:focus {
+    border: 1px solid #1877f2;
+}
+
+input[type=button] {
+    background-color: green;
+    color: white;
+    padding:10px;
+    width: 50%;
+    margin: 25px 90px;
+    font-size: 17px;
+    font-weight: 600;
+
+    
+}
+
+#bottom-caption{
+    padding: 15px;
+    text-align: center;
+}
+#bottom-caption a{
+    color: black;
+    font-weight: 600;
+}
+#bottom-caption a:hover{
+    text-decoration: underline;
+}
