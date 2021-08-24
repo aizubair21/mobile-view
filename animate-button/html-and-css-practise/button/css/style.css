@@ -513,7 +513,7 @@
     border-top-style:dashed;
     border-top-color: green;
 
-    animation: spin2 2s ease-in infinite;
+    animation: spin2 2s linear infinite;
   }
   @keyframes spin2 {
     0% { transform: rotate(0); }
@@ -550,7 +550,7 @@
     width: 100%;}
     
   .loading-dots--dot {
-      animation: dot-keyframes 1.5s infinite ease-in-out;
+      animation: dot-keyframes 1.5s infinite linear;
       background-color: #000;
       border-radius: 10px;
       display: inline-block;
@@ -618,78 +618,198 @@
 
   /* cross loader start */
   #overRideLoder {
-    width: 100px;
+    width: 120px;
     height: 100px;
     margin: 0 auto;
     position: relative;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    /* border: 1px solid; */
   }
   
   #overRideLoder .red {
-    width: 50px;
-    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
     background-color: red;
     border-radius: 50%;
-    position: absolute;
-    right: -10px;
-    z-index: 2;
     transition: 1s;
-    animation: roll-2 1s linear alternate infinite;
+    animation: roll-two 1s linear infinite;
   }
   #overRideLoder .green{
     position: absolute;
-    right: -10px;
-    width: 50px;
-    height: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
     background-color: green;
     border-radius: 50%;
-    z-index: 1;
     transition: 1s ;
-    animation: roll 1s linear alternate infinite;
-    /* animation: roll 1s 1s linear infinite; */
+    animation: roll 1s linear infinite;
+    animation-delay: .5s;
+    /* animation: roll-rev 1s linear; */
+
+
   }
-  @keyframes roll-2 {
-    0% {right: 50%;opacity: 2;}
-    100% {right: 100%;;}
+
+  @keyframes roll-two {
+    0% {width: 0px ; height: 0px;}
+    100% {opacity: 0;}
   }
   
   @keyframes roll {
-    0% {left: 50%;}
-    100% {left: 100%;z-index: 1;}
+    0% {width: 0px; height: 0px;}
+    100% {opacity: 0;}
   }
 
   /* cross lodder end */
 
   /* circle loader */
   #circle-loder {
-    width: 110px;
-    height: 110px;
+    width: 70px;
+    height: 70px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    animation: circle-loader 1s linear alternate infinite;
+    position: relative;
+    /* animation: circle-loader 1s linear infinite forwards; */
   }
 
   #circle-loder .red {
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
     background-color: red;
     border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: dance .5s linear alternate infinite forwards;
+
   }
   #circle-loder .green {
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
     background-color: green;
     border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    animation: dance .5s linear alternate infinite forwards;
+    animation-delay: .3s;
   }
+  
+  #circle-loder .yellow{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(15, 196, 228);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: dance .5s linear alternate infinite forwards;
+    animation-delay: .6s;
+  }
+  @keyframes dance {
+    100% {bottom: 50%}
+  }
+
   @keyframes circle-loader {
-     to {transform: rotateY(360deg);}
+     to {transform: rotate(360deg);}
+  }
+
+
+
+
+
+
+  #up-down-loder {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    /* animation: circle-loader 1s linear infinite forwards; */
+  }
+
+  #up-down-loder .red {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    /* border-radius: 50%; */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: up-down 1s linear alternate infinite forwards;
+
+  }
+  #up-down-loder .green {
+    width: 20px;
+    height: 0px;
+    background-color: green;
+    /* border-radius: 50%; */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    animation: up-down 1s linear alternate infinite forwards;
+    animation-delay: .3s;
+  }
+  
+  #up-down-loder .yellow{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(15, 196, 228);
+    /* border-radius: 50%; */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: up-down 1s linear alternate infinite forwards;
+    animation-delay: .6s;
+  }
+  @keyframes up-down {
+    20% {height: 70px;}
+    50% {height: 20px;}
+    70% {height: 30px;}
+    100% {height: 100px}
+  }
+
+  @keyframes circle-loader {
+     to {transform: rotate(360deg);}
   }
   /* loading button end */
 
+  #loading-span {
+    font-size: 25px;
+    
+  }
+  #loading-span h5 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  #loading-span h5 span {
+    /* border: 1px solid black; */
+    width: 7px;
+    height: 7px;
+    margin: 0 2px;
+    background-color: #000;
+    border-radius: 50%;
+    animation: zoom-loder .5s linear alternate infinite;
+  }
+  #loading-span span:nth-child(2) {
+    animation-delay: .3s;
+  }
+  #loading-span span:nth-child(3) {animation-delay: .6s;}
 
 
 
