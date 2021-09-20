@@ -195,6 +195,9 @@
 
 
 /* date shower start  */
+#d_clock {
+  display: none;
+}
 .digital-clock {
   position: relative;
   width: 340px;

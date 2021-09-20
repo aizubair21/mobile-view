@@ -47,7 +47,6 @@ let footerItem = document.getElementsByClassName("bottom-btn");
 $(".bottom-btn").on("click", function () {
   $(".bottom-btn").removeClass("active");
   $(this).addClass("active");
-  isNavClicked = true;
   hideContent();
 });
 
@@ -57,3 +56,15 @@ $(".right-nav-item").on("click", function () {
 
   $(this).addClass("active-nav");
 });
+
+
+
+// show tabs
+function showClock(e, itemName) {
+
+  $(".tab-content").css("display","none");
+
+  if (itemName === "d_clock") {
+  document.getElementById(itemName).style.display = "block";
+  };
+}
