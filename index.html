@@ -32,11 +32,17 @@
                             <ul class="fade">
                                 <span onclick="hideContent()">&times</span>
                                 <li class="right-nav-item active-nav"><a class="active" href="/index.html"> <i class="fas fa-home"></i> Home</a></li>
+
                                 <li class="right-nav-item"><a href="#"> <i class="fas fa-globe-asia"></i> Service</a></li>
-                                <li class="right-nav-item"><a href="clock/index.html"> <i class="fas fa-clock"></i> Clock</a></li>
-                                <li class="right-nav-item"><a href="JQuery practics/index.html"> <i class="fab fa-js-square"></i> JQuery Practics</a></li>
-                                <li class="right-nav-item"><a href="animate-button/index.html"> <i class="fas fa-film"></i> Animate Button</a></li>
-                                <li class="right-nav-item"><a href="animate-button/html-and-css-practise/index.html"> <i class="fab fa-html5"></i> Html and Css</a></li>
+
+                                <li class="right-nav-item"><a href="#d_clock"> <i class="fas fa-clock"></i> Clock</a></li>
+
+                                <li class="right-nav-item"><a href="#"> <i class="fab fa-js-square"></i> JQuery Practics</a></li>
+
+                                <li class="right-nav-item"><a href="#"> <i class="fas fa-film"></i> Animate Button</a></li>
+
+                                <li class="right-nav-item"><a href="#"> <i class="fab fa-html5"></i> Html and Css</a></li>
+
                                 <li class="right-nav-item"><a href="#"> <i class="fas fa-lock"></i> Play Protect</a></li>
                             </ul>
                         </div>
@@ -49,8 +55,8 @@
                             <button type="button"> <i class="fas fa-search"></i></button>
                         </form>
                     </div>
-                    <div class="top-right">
-                    <a href="#" > <img onclick="showRightContent()" src="image/avatar.png" alt=""></a>
+                    <div class="top-right"onclick="showRightContent()">
+                    <a href="#" > <img  src="image/avatar.png" alt=""></a>
                         <div class="content fade">
                             <ul>
                                 <div>
@@ -117,7 +123,7 @@
                             </div>
                         </div>
 
-                        <div class="digital-clock">
+                        <div class="digital-clock" id="d_clock">
                             <div class="clock-body">
                                 <div class="clock-overlay"></div>
                     
@@ -205,6 +211,7 @@
     </div>
 
     <script src="Js/jquery-3.6.0.min.js"></script>
+    <script src="Js/clock-script.js"></script>
     <script src="Js/mobile-view.js"></script>
 
 </body>
