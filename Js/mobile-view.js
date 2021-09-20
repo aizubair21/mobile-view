@@ -4,25 +4,25 @@ var clickIndex = 0;
 
 
 function showContent(){
-    document.querySelector(".top-right .content").style.right = "-300%";
+    document.querySelector(".top-right .content").style.right = "-300px";
     var content = document.querySelector(".top-left-content");
     content.style.left = "-10px";
 }
 
 function hideContent(){
     var content = document.querySelector(".top-left-content");
-    content.style.left = "-500%";
+    content.style.left = "-500px";
 }
 
 function showRightContent(){
-    document.querySelector(".top-left-content").style.left = "-500%";
+    document.querySelector(".top-left-content").style.left = "-500px";
     let content = document.querySelector(".top-right .content");
     content.style.right = "-10px";
 }
 
 function hideRightContent(){
     let content = document.querySelector(".top-right .content")
-    content.style.right = "-500%";
+    content.style.right = "-300px";
 }
 
 
@@ -214,12 +214,51 @@ setInterval(timeShow, 1000);
 setInterval(dateCounter, 3600);
 
 
+// show calender function
+
+function show_cal(time) {
+  document.getElementsByClassName("show-cal").innerHTML = "time";
+}
+
+ show_cal();
+
+function highlightWeek() {
+  let w_day = watch.getDay()+1;
+  let weekDay = document.getElementsByClassName("weeks");
+  weekDay[w_day].style.backgroundColor = "green";
+  weekDay[w_day].style.color = "white";
+  weekDay[w_day].style.border = "none";;
+}
+
+
+
+timeShow();
+highlightWeek();
+setInterval(timeShow, 10);
+// let element = "";
+// for (let index = 0; index < 32; index++) {
+//     element = index;
+//   console.log(element);
+
+//   var list = document.createElement("li");
+//   var text = document.createTextNode (element);
+//   list.appendChild(text);
+//   document.getElementById("days").appendChild(list);
+// 
+
+var toDate = watch.getDate();
+console.log(toDate);
+var monthChild = document.getElementById("month").children[toDate-1];
+monthChild.style.backgroundColor = "green";
+monthChild.style.color = "white";
+monthChild.style.borderRadius = "25px";
+
 // show active button on footer section when click to navigate
 
 let footerItem = document.getElementsByClassName("bottom-btn");
 $(".bottom-btn").on("click", function () {
   $(".bottom-btn").removeClass("active");
-
+  $(".top-left-content").css("display","none");
   $(this).addClass("active");
 });
 

@@ -51,24 +51,23 @@ body{
 
 
 .top{
-    height: 50px;
+    /* height: 50px; */
     display: flex;
     align-items: center;
     background-color: #d6dadd6e;
-    /* border-radius: 25px; */
+    border-radius: 20px;
     margin: 10px 10px 0px 10px;
-    box-shadow: 0px 0px 5px rgba(0,0,0, 0.2);
+    /* box-shadow: 0px 0px 5px rgba(0,0,0, 0.2); */
+    overflow: hidden;
     /* border: 1px solid lightcoral; */
 
 }
 
 .top .top-left{
-    padding: 5px;
-    width:10%;
-    margin: 0px 5px;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
+    padding: 5px 25px;
+    margin: 5px 10px;
     background-color: rgba(240, 128, 128, 0.5);
+    border-radius: 17px;
 }
 .top .top-left-content{
     z-index: 9999;
@@ -79,14 +78,95 @@ body{
     transition: all linear 0.5s;
     font-size: 20px;
     padding: 5px 0;
- 
-   
-   
 }
+
+
+
+
+.app .top .top-left .top-left-content{
+    position:absolute ;
+    background-color: white;;
+    height:75vh;
+    padding: 10px;
+    top:40px;
+    left:-700px;
+    transition: ease-in .5s;
+    background-color: rgb(172, 94, 94);
+    overflow-Y:scroll;
+
+   
+
+}
+
+.top-left-content ul li a{
+    width: 150px;;
+    padding: 5px 15px;
+    transition: all linear 0.5s;
+    color:black;
+    font-size: 12px;
+}
+.top-left-content ul li a i {
+    padding: 10px 5px;
+}
+.top-left-content ul li:hover:not(.active-nav) {
+    /* background-color: rgba(240, 128, 128, 0.521); */
+    background-color: rgb(177, 177, 177);
+}
+.active-nav {
+    background-color: rgb(240, 128, 128);
+}
+
+.top-left-content ul span{
+    float: right;
+    color:rgb(12, 5, 5);
+    background-color: white;
+    font-size: 25px;
+    padding:5px;
+    opacity: .4;
+    cursor: pointer;
+    transition:all linear .3s;
+    position: sticky;
+    top: 0;
+    right: 0;
+}
+
+.top-left-content ul span:hover{
+    color:rgb(0, 248, 21);
+    opacity: 1;
+}
+
+.top-left-content ul li a:hover{
+    opacity:.7;
+}
+
+.top .top-left .left-container i:hover{
+    color: rgb(0, 255, 13);
+}
+
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1s;
+    animation-name: fade;
+    animation-duration: 1s;
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  @keyframes fade {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
+
+
+
+/* top middle start */
 
 .top .top-middle{
     flex:1;
-
 }
 
 .top .top-middle form{
@@ -95,7 +175,7 @@ body{
 
 .top .top-middle input{
     position: relative;
-    /* border: 1px solid black; */
+    border: 1px solid white;
     border-radius: 25px;
     height: 30px;
     width: 100%;
@@ -107,7 +187,7 @@ body{
     font-size: 14px;
 }
 .top .top-middle input:focus{
-    border: 1px solid #298fe2;
+    border: 1px solid lightcoral;
     border-radius: 25px;
    
 }
@@ -128,15 +208,16 @@ body{
 
 /* .top .top-middle button i{} */
 
+
+/* top right start  */
 .top .top-right{
     display: flex;
-    padding: 5px;
     justify-content: flex-end;
-    width: 10%;
-    background-color: rgba(240, 128, 128, 0.637);
-    margin: 0px 5px;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
+    padding: 5px 25px;
+    margin: 5px 10px;
+    border-radius: 17px;
+    background-color: rgba(240, 128, 128, 0.5);
+
 
 
 }
@@ -153,6 +234,72 @@ body{
     float: right;
 
 }
+
+.top .top-right .content{
+    position: absolute;
+    display: inline-block;
+    top:45px;
+    right: -300px;
+    padding: 10px;
+    text-align: right;
+    height: 65vh;
+    background-color: rgb(172, 94, 94);
+    overflow-Y:scroll;
+    transition: all linear .5s;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    
+
+}
+.top .top-right .content ul {
+    padding: 5px;
+    box-sizing: border-box;
+    height: 100%;
+    border: 1px solid lightcoral;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.top-right .content ul li a i{
+    padding: 5px 0;
+    
+}
+.top-right .content ul li:hover:not(.active-nav) {
+    background-color: rgb(177, 177, 177);
+}
+.top-right .content ul div:last-child li {
+    background-color: rgba(240, 128, 128, 0.705);
+}
+
+
+.top .top-right .content a{
+    padding:5px;
+    margin: 5px 0;
+    width:200px;
+    color: white;
+    margin-top: 2px;
+}
+
+.top .top-right .content span{
+    float: left;
+    font-size: 20px;
+    padding: 5px;
+    background-color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+}
+
+.top .top-right .content span:hover{
+    color: red;
+    cursor: pointer;
+
+}
+
 
 
 
@@ -305,142 +452,3 @@ body{
 }
 
 
-.app .top .top-left{
-    position:relative;
-}
-
-.app .top .top-left .top-left-content{
-    position:absolute ;
-    background-color: white;;
-    height:75vh;
-    padding: 10px;
-    top:40px;
-    left:-0%;
-    transition: ease-in .5s;
-    background-color: rgb(172, 94, 94);
-    overflow-Y:scroll;
-   
-
-}
-
-.top-left-content ul li a{
-    width: 150px;;
-    padding: 5px 15px;
-    transition: all linear 0.5s;
-    color:black;
-    font-size: 12px;
-}
-.top-left-content ul li a i {
-    padding: 10px 5px;
-}
-.top-left-content ul li:hover:not(.active-nav) {
-    /* background-color: rgba(240, 128, 128, 0.521); */
-    background-color: rgb(177, 177, 177);
-}
-.active-nav {
-    background-color: rgb(240, 128, 128);
-}
-
-.top-left-content ul span{
-    float: right;
-    color:rgb(12, 5, 5);
-    background-color: white;
-    font-size: 25px;
-    padding:5px;
-    opacity: .4;
-    cursor: pointer;
-    transition:all linear .3s;
-    position: sticky;
-    top: 0;
-    right: 0;
-}
-
-.top-left-content ul span:hover{
-    color:rgb(0, 248, 21);
-    opacity: 1;
-}
-
-.top-left-content ul li a:hover{
-    opacity:.7;
-}
-
-.top .top-left .left-container i:hover{
-    color: rgb(0, 255, 13);
-}
-
-.top .top-right{
-    position: relative;
-}
-
-.top .top-right .content{
-    position: absolute;
-    display: inline-block;
-    top:45px;
-    right: -500%;
-    padding: 10px;
-    text-align: right;
-    height: 65vh;
-    background-color: rgb(172, 94, 94);
-    overflow-Y:scroll;
-    transition: all linear .5s;
-    border-radius: 5px;
-    
-
-}
-.top .top-right .content ul {
-    padding: 5px;
-    box-sizing: border-box;
-    height: 100%;
-    border: 1px solid lightcoral;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.top-right .content ul div:last-child li {
-    background-color: rgba(240, 128, 128, 0.705);
-}
-
-
-.top .top-right .content a{
-    padding:5px;
-    margin: 5px 0;
-    width:200px;
-    color: white;
-    margin-top: 2px;
-}
-
-.top .top-right .content span{
-    float: left;
-    font-size: 20px;
-    padding: 5px;
-    background-color: white;
-    text-transform: uppercase;
-    cursor: pointer;
-    position: sticky;
-    top: 0;
-    left: 0;
-
-}
-
-.top .top-right .content span:hover{
-    color: red;
-    cursor: pointer;
-
-}
-
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1s;
-    animation-name: fade;
-    animation-duration: 1s;
-  }
-
-  @-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-
-  @keyframes fade {
-    from {opacity: 0}
-    to {opacity: 1}
-  }
