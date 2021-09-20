@@ -46,6 +46,11 @@
 }
 .show-clock div {
   margin: 0 5px;
+  font-size: 20px;
+}
+.show-clock div:not(:last-child) {
+  border-right: 4px solid lightcoral;
+  padding: 5px;
 }
 
 .show-cal {
@@ -85,7 +90,7 @@
   box-shadow:0px 0px 5px black ;
 }
 
-.timing-fungtion .time-body .hour .point{
+/* .timing-fungtion .time-body .hour .point{
   position: absolute;
   top: 0;
   left: 146px;
@@ -93,7 +98,7 @@
   height: 10px;
   background-color: black;
 
-}
+} */
 
 
 .timing-fungtion .time-body .minute {
@@ -112,7 +117,7 @@
   box-shadow:0px 0px 5px black ;
 }
 
-.timing-fungtion .time-body .minute .minute-point .pointer{
+/* .timing-fungtion .time-body .minute .minute-point .pointer{
   position: absolute;
   top: 0;
   left: 137.5px;
@@ -121,7 +126,7 @@
   background-color: black;
 
 
-}
+} */
 
 .timing-fungtion .time-body .second {
   position: absolute;
@@ -139,7 +144,7 @@
   box-shadow:0px 0px 5px rgb(16, 218, 32) ;
 }
 
-
+/* 
 .timing-fungtion .time-body .second .point{
   position: absolute;
   top: 0;
@@ -148,7 +153,7 @@
   height: 50px;
   background-color: black;
 
-}
+} */
 
 
 .timing-fungtion .time-body .point-12{

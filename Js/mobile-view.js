@@ -2,45 +2,27 @@
 var clickIndex = 0;
 // clickFunction(clickIndex);
 
-function clickFunction(){
-    clickableFunction(clickIndex);
-}
-
-
-
-function clickableFunction(){
-    var btns = document.querySelectorAll("#bottom-btn");
-
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].className = btns[i].className.replace( "active", " " );
-    } 
-
-    for(i = 0; i < btns.length; i++){
-        btns[0].className = "active";
-    }
-}
-
 
 function showContent(){
-    document.querySelector(".top-right .content").style.display = "none";
+    document.querySelector(".top-right .content").style.right = "-300%";
     var content = document.querySelector(".top-left-content");
-    content.style.display = "block";
+    content.style.left = "-10px";
 }
 
 function hideContent(){
     var content = document.querySelector(".top-left-content");
-    content.style.display = "none";
+    content.style.left = "-500%";
 }
 
 function showRightContent(){
-    document.querySelector(".top-left-content").style.display = "none";
+    document.querySelector(".top-left-content").style.left = "-500%";
     let content = document.querySelector(".top-right .content");
-    content.style.display = "block";
+    content.style.right = "-10px";
 }
 
 function hideRightContent(){
     let content = document.querySelector(".top-right .content")
-    content.style.display = "none";
+    content.style.right = "-500%";
 }
 
 
@@ -228,5 +210,22 @@ function dateCounter() {
 
 showDate();
 timeShow();
-setInterval(timeShow, 10);
+setInterval(timeShow, 1000);
 setInterval(dateCounter, 3600);
+
+
+// show active button on footer section when click to navigate
+
+let footerItem = document.getElementsByClassName("bottom-btn");
+$(".bottom-btn").on("click", function () {
+  $(".bottom-btn").removeClass("active");
+
+  $(this).addClass("active");
+});
+
+
+$(".right-nav-item").on("click", function () {
+  $(".right-nav-item").removeClass("active-nav");
+
+  $(this).addClass("active-nav");
+});

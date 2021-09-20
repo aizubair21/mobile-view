@@ -31,13 +31,13 @@
                             <div class="top-left-content">
                                 <ul class="fade">
                                     <span onclick="hideContent()">&times</span>
-                                    <li><a href="/index.html">Home</a></li>
-                                    <li><a href="#">Service</a></li>
-                                    <li><a href="clock/index.html">Clock</a></li>
-                                    <li><a href="JQuery practics/index.html">JQuery Practics</a></li>
-                                    <li><a href="animate-button/index.html">Animate Button</a></li>
-                                    <li><a href="animate-button/html-and-css-practise/index.html">Html and Css</a></li>
-                                    <li><a href="#">Play Protect</a></li>
+                                    <li class="right-nav-item active-nav"><a class="active" href="/index.html"> <i class="fas fa-home"></i> Home</a></li>
+                                    <li class="right-nav-item"><a href="#"> <i class="fas fa-globe-asia"></i> Service</a></li>
+                                    <li class="right-nav-item"><a href="clock/index.html"> <i class="fas fa-clock"></i> Clock</a></li>
+                                    <li class="right-nav-item"><a href="JQuery practics/index.html"> <i class="fab fa-js-square"></i> JQuery Practics</a></li>
+                                    <li class="right-nav-item"><a href="animate-button/index.html"> <i class="fas fa-film"></i> Animate Button</a></li>
+                                    <li class="right-nav-item"><a href="animate-button/html-and-css-practise/index.html"> <i class="fab fa-html5"></i> Html and Css</a></li>
+                                    <li class="right-nav-item"><a href="#"> <i class="fas fa-lock"></i> Play Protect</a></li>
                                 </ul>
                             </div>
                         
@@ -53,13 +53,16 @@
                         <a href="#" > <img onclick="showRightContent()" src="image/avatar.png" alt=""></a>
                             <div class="content fade">
                                 <ul>
-                                    <span onclick="hideRightContent()">&times</span>
-                                    <li><a href="#">View profile</a></li>
-                                    <li><a href="#">Manage profile</a></li>
-                                    <li><a href="#">Manage profile</a></li>
-                                    <li><a href="#">Security</a></li>
-                                    <li><a href="#">Account Management</a></li>
-                                    <li><a href="#">Sign Out</a></li>
+                                    <div>
+                                        <span onclick="hideRightContent()">&times</span>
+                                        <li class="right-nav-item"><a href="#">View profile <i class="fas fa-user-alt"></i> </a></li>
+                                        <li class="right-nav-item"><a href="#">Manage profile <i class="fas fa-id-card"> </i> </a></li>
+                                        <li class="right-nav-item"><a href="#">Security <i class="fas fa-user-lock"></i> </a></li>
+                                        <li class="right-nav-item"><a href="#">Account Management <i class="fas fa-tasks"></i> </a></li>
+                                    </div>
+                                   <div>
+                                    <li class="right-nav-item"><a href="#">Sign Out <i class="fas fa-sign-out-alt"></i></a></li>
+                                   </div>
                                 </ul>
                             </div>
                         
@@ -117,19 +120,19 @@
                     <ul class="bottom-links">
     
                         <li >
-                            <a href="#" class="bottom-btn " onclick="clickFunction()"> 
+                            <a href="#" class="bottom-btn"> 
                                 <i class="fas fa-gamepad"></i>
                                 <span>games</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="bottom-btn active" onclick="clickFunction()"> 
+                            <a href="index.html" class="bottom-btn active"> 
                                 <i class="fas fa-home"></i>
                                 <span>home</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="bottom-btn " onclick="clickFunction()"> 
+                            <a href="#" class="bottom-btn "> 
                                 <i class="fab fa-app-store"></i>
                                 <span>apps</span>
                             </a>
@@ -140,6 +143,8 @@
             </div>
         </div>
     </div>
+
+    <script src="Js/jquery-3.6.0.min.js"></script>
     <script src="Js/mobile-view.js"></script>
 
 </body>
